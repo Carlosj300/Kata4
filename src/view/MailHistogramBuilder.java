@@ -15,14 +15,12 @@ import model.Histogram;
 public class MailHistogramBuilder {
     
     
-    MailHistogramBuilder(List<String> list) {
+    public Histogram<String> getHisto(List<String> list) {
         Histogram histo = new Histogram();
         for(String i : list){
             histo.increment(i);
         }
-        
-        HistogramDisplay histoD = new HistogramDisplay(histo);
-        histoD.execute();
+        return histo;
     }
     
     

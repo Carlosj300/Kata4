@@ -20,8 +20,10 @@ import model.Mail;
  */
 public class MailListReader {
  
+    private List<String> list;
+            
     public MailListReader() throws FileNotFoundException, IOException{
-        List<String> list = new ArrayList<String>();
+        list = new ArrayList<String>();
         
         File file = new File("C:\\Users\\carlo\\OneDrive\\Documentos\\NetBeansProjects\\Kata4\\src\\view\\email.txt");
         BufferedReader bf;
@@ -31,11 +33,12 @@ public class MailListReader {
         while((s = bf.readLine()) != null){
             if(s.contains("@")) list.add(new Mail().getMail(s));
         }
+                
         
-        MailHistogramBuilder mhb = new MailHistogramBuilder(list);
-        
-        
-        
+    }
+
+    public List<String> getList() {
+        return list;
     }
         
 }

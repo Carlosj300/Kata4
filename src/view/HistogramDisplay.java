@@ -18,7 +18,7 @@ import org.jfree.ui.ApplicationFrame;
  * @author carlos
  */
 
-class HistogramDisplay extends ApplicationFrame {
+public class HistogramDisplay extends ApplicationFrame {
     
     private final Histogram<String> histogram;
     public HistogramDisplay(Histogram<String> histogram ){
